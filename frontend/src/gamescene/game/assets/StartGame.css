@@ -1,0 +1,140 @@
+.card-container {
+  width: 90%; 
+  max-width: 400px; 
+  width: 90%; 
+  max-width: 400px; 
+  position: relative;
+  margin: 0 auto; 
+  margin: 0 auto; 
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  touch-action: pan-y;
+  user-select: none;
+  width: 100%;
+}
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.arrows {
+  display: none;
+}
+.arrow {
+  width: 70px;
+  height: 70px;
+  background-color: #14233b;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: normal; 
+}
+.arrow.left {
+  background-color: #ff0000;
+}
+.arrow.right {
+  background-color: #00ff00; 
+}
+.card.rotate-left {
+  transform: translateX(-150%) rotate(-180deg);
+}
+.card.rotate-right {
+  transform: translateX(150%) rotate(180deg);
+}
+.card.return {
+  transform: translateX(0) rotate(0deg); 
+}
+.pontuacao {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  background: #14233b;
+  color: #ffffff; 
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: bold;
+}
+.exit-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  background: #d32f2f; 
+  color: #ffffff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.exit-button:hover {
+  background: #b71c1c; 
+}
+.feedback-message {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-size: 16px;
+  font-weight: bold;
+  max-width: 80%; 
+  word-wrap: break-word; 
+}
+@media only screen and (min-width: 768px) {
+  .arrows {
+    display: flex; 
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    z-index: 999; 
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .card {
+    height: 70vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card h2 {
+    font-size: 20px; 
+    margin-bottom: 10px;
+    text-align: center; 
+  }
+  .feedback-message {
+    top: 10px;
+    left: 10px;
+    bottom: auto; 
+    width: auto; 
+    max-width: 90%; 
+    font-size: 14px; 
+    padding: 8px;
+    transform: none; 
+    word-wrap: break-word; 
+  }
+}

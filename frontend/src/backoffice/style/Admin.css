@@ -1,0 +1,178 @@
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+button.logout-btn {
+    display: block;
+    width: 50%; 
+    margin: 0 auto; 
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #dc3545; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+button.logout-btn:hover {
+    background-color: #c82333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.create-btn {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #45a049; 
+}
+
+.delete-btn {
+    background-color: #f44336; 
+}
+
+.delete-btn:hover {
+    background-color: #df1515; 
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        padding-top: 20px;
+        z-index: 1000; 
+    }
+
+    .sidebar.open {
+        display: block; 
+    }
+
+    .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1100; 
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle:nth-of-type(2) {
+        top: 30px;
+    }
+
+    .menu-toggle:nth-of-type(3) {
+        top: 40px;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        margin-left: 0; 
+        padding: 43px;
+        margin-right: 20px;
+    }
+
+    h1, p {
+        text-align: center; 
+    }
+
+    .logout-btn {
+        width: 100%; 
+    }
+}
